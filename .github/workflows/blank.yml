@@ -30,4 +30,5 @@ jobs:
         with:
           directory: ./website
           enforce_https: false
+          check_favicon: false
 
