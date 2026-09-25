@@ -26,7 +26,7 @@ jobs:
         run: npx htmlhint website/index.html
 
       - name: Check CSS
-        run: npx stylelint website/style.css
+        run: npx stylelint website/style.css --fix
 
       - name: Check JavaScript syntax
         run: node --check website/script.js
