@@ -24,7 +24,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: "Checking HTML and CSS"
+        run: echo "Checking HTML and CSS"
 
       - uses: anishathalye/proof-html@v2
         with:
