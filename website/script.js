@@ -1,9 +1,11 @@
 function createGreeting(name) {
-    if (!name.trim()) {
+    const trimmedName = name.trim();
+
+    if (trimmedName === "") {
         return "Please enter your name.";
     }
 
-    return `Hello ${name}, welcome to the ADT DevOps module!`;
+    return `Hello ${trimmedName}, welcome to the ADT DevOps module!`;
 }
 
 const greetingForm = document.getElementById("greetingForm");
@@ -15,9 +17,13 @@ greetingForm.addEventListener("submit", function (event) {
 
     message.textContent = createGreeting(nameInput.value);
 
-    if (!nameInput.value.trim()) {
+    if (nameInput.value.trim() === "") {
         nameInput.focus();
     }
 });
 
-module.exports = { createGreeting };
+// Makes the function available to Jest.
+// The browser ignores this section.
+if (typeof module !== "undefined") {
+    module.exports = { createGreeting };
+}
