@@ -1,3 +1,11 @@
+function createGreeting(name) {
+    if (!name.trim()) {
+        return "Please enter your name.";
+    }
+
+    return `Hello ${name}, welcome to the ADT DevOps module!`;
+}
+
 const greetingForm = document.getElementById("greetingForm");
 const nameInput = document.getElementById("nameInput");
 const message = document.getElementById("message");
@@ -5,14 +13,11 @@ const message = document.getElementById("message");
 greetingForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const name = nameInput.value.trim();
+    message.textContent = createGreeting(nameInput.value);
 
-    if (name === "") {
-        message.textContent = "Please enter your name.";
+    if (!nameInput.value.trim()) {
         nameInput.focus();
-        return;
     }
-
-    message.textContent =
-        `Hello ${name}, welcome to the ADT DevOps module!`;
 });
+
+module.exports = { createGreeting };
