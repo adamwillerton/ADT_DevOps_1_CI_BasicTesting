@@ -1,6 +1,6 @@
 # ADT_DevOps_1_CI_BasicTesting
 
-Just a simple workflow containing some testing (i.e. to show the CI element).
+A simple workflow containing some testing (i.e. to show the CI element).
 
 - json file included to specify the testing framework to be used.
 - test folder and unit tests added inside the 'website' folder
